@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360.93 349.52">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fcfcfc;
+      }
+
+      .cls-2 {
+        stroke-width: 6.47px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 19.39px;
+      }
+
+      .cls-4 {
+        font-family: Poppins-SemiBold, Poppins;
+        font-size: 167.63px;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(393.17 223.77)"><tspan x="0" y="0">InvoicelAi</tspan></text>
+  <circle class="cls-1" cx="200.02" cy="166.59" r="20.05"/>
+  <circle class="cls-1" cx="308.69" cy="166.59" r="20.05"/>
+  <circle class="cls-1" cx="254.47" cy="99.68" r="13.94"/>
+  <path class="cls-2" d="M254.47,113.62v65.25c0,1.36-1.1,2.46-2.46,2.46h-9.03c-1.36,0-2.46,1.1-2.46,2.46v24.66c0,1.36,1.1,2.46,2.46,2.46h14.18"/>
+  <line class="cls-3" x1="358.88" y1="196.33" x2="358.88" y2="136.84"/>
+  <line class="cls-3" x1="138.82" y1="196.33" x2="138.82" y2="136.84"/>
+</svg>
