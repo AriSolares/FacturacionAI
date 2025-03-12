@@ -1,0 +1,90 @@
+.perfil-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: var(--White);
+    min-height: 100vh;
+}
+
+.perfil-titulo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--btn1);
+}
+
+.perfil-card {
+    background: var(--Tres);
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-foto {
+    width: 120pt;
+    height: 120pt;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.perfil-foto img {
+    width: 120pt;
+    height: 120pt;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--btn1);
+}
+
+.perfil-cambiar-foto {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--btn1);
+    color: var(--White);
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.perfil-cambiar-foto:hover {
+    background: var(--btn2);
+}
+
+.perfil-foto input {
+    display: none;
+}
+
+.perfil-form {
+    width: 100%;
+}
+
+.perfil-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.perfil-input label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--White);
+}
+
+.perfil-input input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--btn1);
+    font-size: 16px;
+   
+}
