@@ -207,7 +207,9 @@ body{
 }
 
 .card-title{
+    margin-top: 2rem;
     font-size: 18pt;
+    font-weight: 600;
     color: #baa6cc;
 }
 
@@ -341,4 +343,89 @@ body{
 
 .char{
     padding: 2rem 20rem;
+}
+
+@keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* Ajusta la altura de la levitación */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-image img {
+    animation: floating 3s ease-in-out infinite; /* Aplica la animación */
+  }
+  
+  .card {
+    position: relative;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: var(--Cuatro);
+    padding: 2rem 1rem;
+}
+
+/* Borde con degradado */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px; /* Mismo radio que la tarjeta */
+    padding: 3px; /* Grosor del borde */
+    background: linear-gradient(45deg, var(--Morado), var(--Dos), var(--btn1), var(--btn2)); 
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: exclude;
+}
+
+.card-header {
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--White);
+    padding: 15px 0;
+}
+
+.card-body {
+    background-color: var(--Cuatro);
+    color: var(--White);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-body ul li {
+    margin: 10px 0;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #baa6cc;
+    margin-top: 15px;
+}
+
+/* Botón de selección */
+.btn-precios {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    background-image: linear-gradient(to right, var(--btn1), var(--btn2));
+    color: var(--White);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-precios:hover {
+    transform: scale(1.05);
 }

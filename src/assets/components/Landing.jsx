@@ -90,20 +90,20 @@ const LandingPage = () => {
       {/* Planes y Precios */}
       <section className="planes py-5 fade-section">
         <div className="contenedor">
-          <h2 className="text-center mb-4">Planes y Precios</h2>
+          <h2 className="text-center">Planes y Precios</h2>
           <div className="row">
             {/* Plan Básico */}
       <div className="col-md-4 pricebox">
         <div className="card text-center mb-3">
           <div className="card-header">Básico</div>
           <div className="card-body">
-            <h5 className="card-title">$9.99/mes</h5>
             <p className="card-text"><span style={{ fontWeight: "600" }}>Ideal para pequeños negocios.</span></p>
             <ul>
               <li>Hasta 200 facturas por mes</li>
               <li>Soporte estándar</li>
               <li>Acceso limitado a funciones de IA</li>
             </ul>
+            <h5 className="card-title">$9.99/mes</h5>
             <a href="#signup" className="btn btn-primary btn-precios">Seleccionar</a>
           </div>
         </div>
@@ -114,13 +114,13 @@ const LandingPage = () => {
         <div className="card text-center mb-3">
           <div className="card-header">Plan Pro</div>
           <div className="card-body">
-            <h5 className="card-title">$19.99/mes</h5>
             <p className="card-text"><span style={{ fontWeight: "600" }}>Para negocios en crecimiento.</span></p>
             <ul>
               <li>Hasta 1000 facturas por mes</li>
               <li>Soporte prioritario</li>
               <li>Acceso a todas las funciones de IA</li>
             </ul>
+            <h5 className="card-title">$19.99/mes</h5>
             <a href="#signup" className="btn btn-primary btn-precios">Seleccionar</a>
           </div>
         </div>
