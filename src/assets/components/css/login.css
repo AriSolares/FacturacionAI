@@ -74,6 +74,15 @@
   color: var(--White);
 }
 
+.formGroup{
+  text-align: left;
+}
+
+.formGroup label{
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 /* Contenido del formulario */
 .tabContent {
   padding: 20px;
