@@ -1,0 +1,80 @@
+:root {
+    --fondo: #F8F9FA;
+    --tarjeta: #FFFFFF;
+    --borde: #E0E0E0;
+    --texto: #212529;
+    --icono: #666;
+  }
+  
+  .facturas-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .facturas-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--White);
+    margin-bottom: 20px;
+  }
+  
+  .facturas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .factura-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--Cuatro);
+    color: var(--White);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #71D9B3;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .factura-card:hover {
+    background: #71D9B3;
+    border: 1px solid #212529;
+    color: #212529;
+  }
+  
+  .factura-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .factura-nombre {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .factura-concepto {
+    font-size: 14px;
+  }
+  
+  .factura-icon {
+    font-size: 18px;
+    color: var(--White);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 600px) {
+    .factura-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .factura-icon {
+      align-self: flex-end;
+      margin-top: 5px;
+    }
+  }
+  
