@@ -30,11 +30,7 @@ const Perfil = () => {
       <h2 className="perfil-titulo">Perfil de Usuario</h2>
       <div className="perfil-card">
         <div className="perfil-foto">
-          <img src={user.foto} alt="Foto de usuario" />
-          <label htmlFor="file-input" className="perfil-cambiar-foto">
-            <FaCamera />
-            Cambiar foto
-          </label>
+          <img src={user.foto} alt="" />
           <input id="file-input" type="file" accept="image/*" onChange={handlePhotoChange} />
         </div>
 
