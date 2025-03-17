@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaCamera } from "react-icons/fa";
-import "./css/perfil.css";
+import "../perfil/perfil.css";
 
 const Perfil = () => {
   const [user, setUser] = useState({
