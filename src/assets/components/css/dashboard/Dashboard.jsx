@@ -3,6 +3,7 @@ import Aside from "../dashboard/aside/Aside";
 import Chatbot from "../dashboard/chatbot/Chatbot";
 import Facturas from "../dashboard/listaFacturas/ListaFacturas";
 import Accesos from "../dashboard/accesos/Accesos";
+import DashboardHome from "../dashboard/dashboardHome/DashboardHome";
 import Contribuyentes from "../dashboard/contribuyentes/Contribuyentes";
 import Perfil from "../dashboard/perfil/Perfil";
 import Ajustes from "../dashboard/ajustes/Ajustes";
@@ -17,6 +18,7 @@ function Dashboard({ onLogout }) {
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard/chatbot" />} />
           <Route path="chatbot" element={<Chatbot />} />
+          <Route path="home" element={<DashboardHome />} />
           <Route path="facturas" element={<Facturas />} />
           <Route path="accesos" element={<Accesos />} />
           <Route path="contribuyentes" element={<Contribuyentes />} />
