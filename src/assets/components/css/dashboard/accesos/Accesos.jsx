@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaUpload, FaTrash, FaPlus } from "react-icons/fa";
-import "./css/accesos.css";
+import "../accesos/accesos.css";
 
 const Accesos = () => {
   const [alias, setAlias] = useState("");
