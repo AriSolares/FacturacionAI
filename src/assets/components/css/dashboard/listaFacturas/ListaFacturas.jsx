@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/listafacturas.css";
+import "../listaFacturas/listafacturas.css";
 import { FaChevronRight } from "react-icons/fa";
 
 const facturas = [
