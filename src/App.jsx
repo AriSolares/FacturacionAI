@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
-import Landing from "./assets/components/Landing";
-import Login from "./pages/Login";
-import Dashboard from "./assets/components/Dashboard";
+import Landing from "./assets/components/landing/Landing";
+import Login from "./assets/components/css/login/Login";
+import Dashboard from "./assets/components/css/dashboard/Dashboard";
 import Header from "./assets/components/Header";
 import './style.css'
 
@@ -10,7 +10,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogout = () => {
-    setIsAuthenticated(false); // ✅ Cierra la sesión
+    setIsAuthenticated(false); 
   };
 
   return (
