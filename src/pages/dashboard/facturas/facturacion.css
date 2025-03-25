@@ -1,0 +1,310 @@
+/* Variables de color desde :root */
+:root {
+  --Morado: #31078C;
+  --Dos: #2B0973;
+  --Tres: #0E0C40;
+  --Cuatro: #0C0d27;
+  --White: #F2F2F2;
+  --btn1: #966BF2;
+  --btn2: #7135F2;
+  --btn3: #6b9cf2;
+  --text-primary: var(--White);
+  --text-secondary: #baa6cc;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.facturacion-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: var(--White);
+}
+
+.facturacion-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--btn1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.facturacion-titulo-icon {
+  color: var(--btn1);
+}
+
+.facturacion-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.facturacion-card {
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--Cuatro, #1E1E3F);
+  border: 1px solid var(--btn2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.facturacion-card-titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.facturacion-card-titulo svg {
+  color: var(--btn1);
+}
+
+.facturacion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.facturacion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.facturacion-label {
+  font-weight: bold;
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.facturacion-icon {
+  color: var(--btn1);
+}
+
+.facturacion-input {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--White);
+  transition: all var(--transition-fast);
+}
+
+.facturacion-input:focus {
+  outline: none;
+  border-color: var(--btn1);
+  box-shadow: 0 0 0 2px rgba(150, 107, 242, 0.2);
+}
+
+.facturacion-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.facturacion-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.facturacion-row .facturacion-item {
+  flex: 1;
+}
+
+.facturacion-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  background: linear-gradient(to right, var(--btn1), var(--btn2));
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facturacion-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--btn2), var(--btn1));
+}
+
+.facturacion-btn:active {
+  transform: translateY(1px);
+}
+
+.btn-icon {
+  font-size: 1.125rem;
+}
+
+/* Estilos para la sección de plan */
+.plan-card {
+  background: linear-gradient(135deg, var(--Cuatro) 0%, var(--Tres) 100%);
+}
+
+.plan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(150, 107, 242, 0.3);
+}
+
+.plan-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--White);
+  margin: 0;
+}
+
+.plan-precio {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--btn1);
+  display: flex;
+  align-items: baseline;
+}
+
+.plan-periodo {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-left: 0.25rem;
+}
+
+.plan-features h5 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+}
+
+.feature-icon {
+  color: var(--btn1);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.cambiar-plan-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  background: linear-gradient(to right, var(--btn3), var(--btn1));
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cambiar-plan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--btn1), var(--btn3));
+}
+
+.cambiar-plan-btn:active {
+  transform: translateY(1px);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .facturacion-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .facturacion-card {
+    padding: 1.5rem;
+  }
+  
+  .facturacion-titulo {
+    font-size: 1.75rem;
+  }
+  
+  .facturacion-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .facturacion-card-titulo {
+    font-size: 1.25rem;
+  }
+  
+  .facturacion-titulo {
+    font-size: 1.5rem;
+  }
+  
+  .plan-titulo {
+    font-size: 1.25rem;
+  }
+  
+  .plan-precio {
+    font-size: 1.5rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.9rem;
+  }
+}
