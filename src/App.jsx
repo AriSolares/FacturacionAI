@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
-import Landing from "./assets/components/landing/Landing";
-import Login from "./assets/components/css/login/Login";
-import Dashboard from "./assets/components/css/dashboard/Dashboard";
-import Header from "./assets/components/Header";
+import Landing from "./pages/Landing/Landing";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Header from "./assets/components/header/Header";
 import './style.css'
 
 function App() {
