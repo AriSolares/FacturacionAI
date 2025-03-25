@@ -1,0 +1,213 @@
+.perfil-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: var(--White);
+}
+
+.perfil-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--btn1);
+    text-align: center;
+}
+
+.perfil-card {
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--Cuatro, #1E1E3F);
+    border: 1px solid var(--btn2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.perfil-foto {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.perfil-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--btn1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.perfil-foto img:hover {
+    transform: scale(1.05);
+}
+
+.perfil-cambiar-foto {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--btn1);
+    color: var(--White);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.perfil-cambiar-foto:hover {
+    background: var(--btn2);
+    transform: scale(1.1);
+}
+
+.perfil-foto input {
+    display: none;
+}
+
+.perfil-nombre-display {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--White);
+}
+
+.perfil-form {
+    width: 100%;
+}
+
+.perfil-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.perfil-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.perfil-input label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.perfil-input-icon {
+    color: var(--btn1);
+}
+
+.perfil-input input {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--btn1);
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--White);
+    transition: all 0.3s ease;
+}
+
+.perfil-input input:focus {
+    outline: none;
+    border-color: var(--btn2);
+    box-shadow: 0 0 0 2px rgba(113, 217, 179, 0.3);
+}
+
+.perfil-input input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.perfil-boton {
+    width: 100%;
+    padding: 0.875rem;
+    border: none;
+    background: linear-gradient(to right, var(--btn1), var(--btn2));
+    color: var(--White);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, var(--btn2), var(--btn1));
+}
+
+.perfil-boton:active {
+    transform: translateY(1px);
+}
+
+.perfil-boton-icon {
+    font-size: 1.125rem;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .perfil-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .perfil-card {
+        padding: 1.5rem;
+    }
+    
+    .perfil-titulo {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .perfil-form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .perfil-foto img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .perfil-cambiar-foto {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .perfil-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .perfil-nombre-display {
+        font-size: 1.25rem;
+    }
+}
