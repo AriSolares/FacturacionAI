@@ -1,0 +1,552 @@
+/* Variables de color desde :root */
+:root {
+  --Morado: #31078C;
+  --Dos: #2B0973;
+  --Tres: #0E0C40;
+  --Cuatro: #0C0d27;
+  --White: #F2F2F2;
+  --btn1: #966BF2;
+  --btn2: #7135F2;
+  --btn3: #6b9cf2;
+  --text-primary: var(--White);
+  --text-secondary: #baa6cc;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+  --table-header-bg: var(--btn1);
+  --table-header-text: var(--White);
+  --error-color: #f26b6b;
+}
+
+/* Contenedor principal de accesos */
+.accesos-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 80vh;
+  margin: 2rem auto;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  background-color: rgba(14, 12, 64, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(150, 107, 242, 0.2);
+}
+
+/* Encabezado de accesos */
+.accesos-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--Cuatro) 0%, var(--Tres) 100%);
+  color: var(--White);
+  border-bottom: 1px solid rgba(150, 107, 242, 0.3);
+}
+
+.accesos-header-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  color: var(--btn1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(150, 107, 242, 0.1);
+}
+
+.accesos-header-text {
+  flex: 1;
+}
+
+.accesos-header-text h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: linear-gradient(to right, var(--btn1), var(--btn2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accesos-header-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Contenido principal */
+.accesos-content {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(10, 8, 19, 0.8);
+}
+
+/* Sección de formulario */
+.accesos-form-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(12, 13, 39, 0.8);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid rgba(150, 107, 242, 0.2);
+}
+
+.accesos-form-section h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accesos-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.form-icon {
+  color: var(--btn1);
+  font-size: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  border-radius: var(--border-radius-md);
+  background-color: rgba(14, 12, 64, 0.5);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--btn1);
+  box-shadow: 0 0 0 2px rgba(150, 107, 242, 0.2);
+}
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Estilo para input de archivo */
+.file-upload {
+  position: relative;
+}
+
+.file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: rgba(14, 12, 64, 0.5);
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.file-label:hover {
+  background-color: rgba(14, 12, 64, 0.8);
+  border-color: var(--btn1);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.file-icon {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--btn1);
+}
+
+/* Estilo para input de contraseña */
+.password-input-container {
+  position: relative;
+  display: flex;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 6rem;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+  border-radius: var(--border-radius-sm);
+}
+
+.toggle-password-btn:hover {
+  color: var(--btn1);
+  background-color: rgba(150, 107, 242, 0.1);
+}
+
+/* Acciones del formulario */
+.accesos-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, var(--btn1) 0%, var(--btn2) 100%);
+  color: var(--White);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0.7;
+}
+
+.add-btn.active {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.add-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--btn2) 0%, var(--btn1) 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(150, 107, 242, 0.4);
+}
+
+.add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  margin-right: 0.5rem;
+}
+
+/* Sección de lista de accesos */
+.accesos-list-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(12, 13, 39, 0.8);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid rgba(150, 107, 242, 0.2);
+}
+
+.list-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.list-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.search-container {
+  position: relative;
+  min-width: 200px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  border-radius: var(--border-radius-md);
+  background-color: rgba(14, 12, 64, 0.5);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--btn1);
+  box-shadow: 0 0 0 2px rgba(150, 107, 242, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Tabla de accesos */
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--border-radius-md);
+  background-color: rgba(12, 13, 39, 0.6);
+  border: 1px solid rgba(150, 107, 242, 0.2);
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-primary);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+.table-icon {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(150, 107, 242, 0.1);
+  font-size: 0.95rem;
+}
+
+tr:hover {
+  background-color: rgba(14, 12, 64, 0.8);
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.8rem;
+}
+
+.edit-btn {
+  background-color: rgba(107, 156, 242, 0.2);
+  color: var(--btn3);
+}
+
+.edit-btn:hover {
+  background-color: rgba(107, 156, 242, 0.4);
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: rgba(242, 107, 107, 0.2);
+  color: var(--error-color);
+}
+
+.delete-btn:hover {
+  background-color: rgba(242, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+}
+
+/* Footer de accesos */
+.accesos-footer {
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background-color: var(--Cuatro);
+  border-top: 1px solid rgba(150, 107, 242, 0.1);
+}
+
+.accesos-footer p {
+  margin: 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .accesos-container {
+    width: 95%;
+    margin: 1.5rem auto;
+  }
+  
+  .accesos-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .accesos-container {
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: var(--border-radius-md);
+  }
+  
+  .accesos-header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .accesos-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .accesos-form-section,
+  .accesos-list-section {
+    padding: 1rem;
+  }
+  
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .accesos-container {
+    margin: 0.5rem auto;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .accesos-header-icon {
+    font-size: 1.3rem;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+  }
+  
+  .accesos-header-text h2 {
+    font-size: 1rem;
+  }
+  
+  .accesos-header-text p {
+    font-size: 0.7rem;
+  }
+  
+  .form-group label,
+  .form-group input,
+  .file-label {
+    font-size: 0.9rem;
+  }
+  
+  .add-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+  }
+  
+  th, td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .action-btn {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Soporte para modo oscuro/claro */
+@media (prefers-color-scheme: dark) {
+  .accesos-container {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .accesos-container {
+    color-scheme: light;
+  }
+}
