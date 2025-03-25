@@ -1,0 +1,315 @@
+/* Variables de color desde :root */
+:root {
+  --Morado: #31078C;
+  --Dos: #2B0973;
+  --Tres: #0E0C40;
+  --Cuatro: #0C0d27;
+  --White: #F2F2F2;
+  --btn1: #966BF2;
+  --btn2: #7135F2;
+  --btn3: #6b9cf2;
+  --text-primary: var(--White);
+  --text-secondary: #baa6cc;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ajustes-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: var(--White);
+}
+
+.ajustes-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--btn1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ajustes-titulo-icon {
+  color: var(--btn1);
+}
+
+.ajustes-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ajustes-card {
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--Cuatro, #1E1E3F);
+  border: 1px solid var(--btn2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ajustes-card-titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ajustes-card-titulo svg {
+  color: var(--btn1);
+}
+
+.ajustes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ajuste-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ajuste-label {
+  font-weight: bold;
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ajuste-icon {
+  color: var(--btn1);
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(150, 107, 242, 0.3);
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn.active {
+  color: var(--btn1);
+}
+
+.tema-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tema-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.tema-opcion:hover {
+  background-color: rgba(150, 107, 242, 0.1);
+}
+
+.tema-opcion.active {
+  background-color: rgba(150, 107, 242, 0.2);
+  border-color: var(--btn1);
+}
+
+.tema-opcion input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.tema-check {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(150, 107, 242, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tema-opcion.active .tema-check::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--btn1);
+}
+
+.select-container {
+  position: relative;
+}
+
+.ajuste-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--White);
+  appearance: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ajuste-select:focus {
+  outline: none;
+  border-color: var(--btn1);
+  box-shadow: 0 0 0 2px rgba(150, 107, 242, 0.2);
+}
+
+.select-container::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.ajuste-input {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(150, 107, 242, 0.3);
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--White);
+  transition: all var(--transition-fast);
+}
+
+.ajuste-input:focus {
+  outline: none;
+  border-color: var(--btn1);
+  box-shadow: 0 0 0 2px rgba(150, 107, 242, 0.2);
+}
+
+.ajuste-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ajustes-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  background: linear-gradient(to right, var(--btn1), var(--btn2));
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ajustes-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--btn2), var(--btn1));
+}
+
+.ajustes-btn:active {
+  transform: translateY(1px);
+}
+
+.btn-icon {
+  font-size: 1.125rem;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .ajustes-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .ajustes-card {
+    padding: 1.5rem;
+  }
+  
+  .ajustes-titulo {
+    font-size: 1.75rem;
+  }
+  
+  .tema-opciones {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .ajustes-card-titulo {
+    font-size: 1.25rem;
+  }
+  
+  .ajustes-titulo {
+    font-size: 1.5rem;
+  }
+  
+  .toggle-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .toggle-container span {
+    margin-bottom: 0.5rem;
+  }
+  
+  .toggle-btn {
+    align-self: flex-end;
+  }
+}
